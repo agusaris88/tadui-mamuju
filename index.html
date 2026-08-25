@@ -3,117 +3,643 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>Peta Produksi Rumput Laut – Tadui Mamuju</title>
 
-<!-- Preview saat link dibagikan ke WhatsApp/Facebook/LinkedIn -->
+<!-- =========================================================
+     OPEN GRAPH — Preview saat link dibagikan
+     ========================================================= -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Peta Produksi Rumput Laut – Tadui Mamuju">
-<meta property="og:description" content="Visualisasi produksi rumput laut berbasis geospasial. Total produksi kering : 4.987,59 kg.">
+<meta property="og:description" content="Visualisasi produksi rumput laut berbasis data geospasial. Total produksi kering: 4.987,59 Kg.">
 <meta property="og:image" content="cover-peta-tadui-mamuju.png">
-<meta property="og:image:alt" content="Peta produksi rumput laut Tadui Mamuju">
+<meta property="og:image:alt" content="Peta Produksi Rumput Laut Tadui Mamuju">
+
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Peta Produksi Rumput Laut – Tadui Mamuju">
-<meta name="twitter:description" content="Visualisasi produksi rumput laut berbasis geospasial.">
+<meta name="twitter:description" content="Visualisasi produksi rumput laut berbasis data geospasial.">
 <meta name="twitter:image" content="cover-peta-tadui-mamuju.png">
 
 <style>
-:root { color-scheme: light; }
-* { box-sizing: border-box; }
+
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+:root {
+    color-scheme: light;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-  margin: 0;
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: #f4f7f8;
-  color: #172027;
+    margin: 0;
+    font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    background: #f4f7f8;
+    color: #172027;
 }
-.wrap { max-width: 960px; margin: 0 auto; padding: 28px 18px 42px; }
+
+
+/* =========================================================
+   MAIN CONTAINER
+   ========================================================= */
+
+.wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 28px 18px 45px;
+}
+
+
+/* =========================================================
+   MAIN CARD
+   ========================================================= */
+
 .card {
-  background: #fff;
-  border: 1px solid #e4e9ec;
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 10px 35px rgba(20,35,45,.08);
+    background: #ffffff;
+
+    border: 1px solid #e4e9ec;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 12px 40px rgba(20, 35, 45, 0.09);
 }
+
+
+/* =========================================================
+   LOGO HEADER
+   ========================================================= */
+
+.logo-header {
+    padding: 25px 35px 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #edf1f3;
+}
+
+
+.logo-container {
+    width: 100%;
+
+    max-width: 820px;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1px
+        1fr
+        1px
+        1fr;
+
+    align-items: center;
+
+    gap: 28px;
+}
+
+
+/* Logo separator */
+
+.logo-separator {
+    width: 1px;
+
+    height: 65px;
+
+    background: #dfe5e8;
+}
+
+
+/* Logo item */
+
+.logo-item {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    height: 90px;
+}
+
+
+/* Logo image */
+
+.logo-item img {
+    max-width: 100%;
+
+    max-height: 80px;
+
+    width: auto;
+
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   TITLE / HERO
+   ========================================================= */
+
 .hero {
-  padding: 28px 28px 18px;
-  text-align: center;
+    padding: 32px 30px 22px;
+
+    text-align: center;
 }
+
+
 .kicker {
-  font-size: 12px;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #53717d;
+    font-size: 13px;
+
+    letter-spacing: 0.13em;
+
+    text-transform: uppercase;
+
+    font-weight: 700;
+
+    color: #53717d;
+
+    margin-bottom: 8px;
 }
-h1 { margin: 8px 0 8px; font-size: clamp(25px, 4vw, 38px); line-height: 1.15; }
-.subtitle { margin: 0 auto; max-width: 680px; color: #63737b; line-height: 1.55; }
-.figure { padding: 0 18px; }
+
+
+h1 {
+    margin: 0 0 12px;
+
+    font-size: clamp(28px, 4vw, 43px);
+
+    line-height: 1.15;
+
+    font-weight: 750;
+
+    color: #172027;
+}
+
+
+.subtitle {
+    margin: 0 auto;
+
+    max-width: 760px;
+
+    color: #63737b;
+
+    font-size: 17px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   MAP IMAGE
+   ========================================================= */
+
+.figure {
+    padding: 5px 22px 0;
+}
+
+
 .figure img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    border-radius: 14px;
+
+    border: 1px solid #e0e6e9;
+
+    box-shadow:
+        0 5px 20px rgba(20, 35, 45, 0.06);
 }
+
+
+/* =========================================================
+   PRODUCTION STATISTIC
+   ========================================================= */
+
 .stats {
-  display: flex;
-  justify-content: center;
-  padding: 20px 18px 8px;
+    display: flex;
+
+    justify-content: center;
+
+    padding: 28px 18px 10px;
 }
+
+
 .stat {
-  text-align: center;
-  padding: 14px 28px;
-  border: 1px solid #e4e9ec;
-  border-radius: 12px;
-  background: #fafcfc;
+    min-width: 300px;
+
+    text-align: center;
+
+    padding: 18px 32px;
+
+    border: 1px solid #dfe7ea;
+
+    border-radius: 15px;
+
+    background: #fafcfc;
 }
-.stat strong { display:block; font-size: 25px; }
-.stat span { color:#6b7a81; font-size:13px; }
-.actions { padding: 18px 28px 28px; text-align:center; }
+
+
+.stat strong {
+    display: block;
+
+    font-size: clamp(28px, 4vw, 38px);
+
+    line-height: 1.1;
+
+    font-weight: 750;
+
+    color: #172027;
+}
+
+
+.stat span {
+    display: block;
+
+    margin-top: 6px;
+
+    color: #6b7a81;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   BUTTON
+   ========================================================= */
+
+.actions {
+    padding: 20px 28px 35px;
+
+    text-align: center;
+}
+
+
 .btn {
-  display: inline-block;
-  padding: 13px 22px;
-  border-radius: 10px;
-  background: #176b87;
-  color: white;
-  text-decoration: none;
-  font-weight: 700;
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    border-radius: 11px;
+
+    background: #176b87;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
-.btn:hover { background:#12566d; }
-.note { margin-top: 12px; font-size: 12px; color:#7a878d; }
-@media (max-width: 600px) {
-  .wrap { padding: 12px; }
-  .hero { padding: 22px 18px 14px; }
-  .actions { padding: 16px 18px 24px; }
-  .stat { width:100%; }
+
+
+.btn:hover {
+    background: #12566d;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 18px rgba(23, 107, 135, 0.2);
 }
+
+
+.note {
+    margin-top: 12px;
+
+    font-size: 13px;
+
+    color: #7a878d;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+    text-align: center;
+
+    padding: 18px;
+
+    color: #8a969c;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+    .wrap {
+        padding: 15px 10px 30px;
+    }
+
+    .logo-header {
+        padding: 20px 15px 15px;
+    }
+
+    .logo-container {
+        grid-template-columns:
+            1fr
+            1fr
+            1fr;
+
+        gap: 10px;
+    }
+
+    .logo-separator {
+        display: none;
+    }
+
+    .logo-item {
+        height: 70px;
+    }
+
+    .logo-item img {
+        max-height: 60px;
+    }
+
+    .hero {
+        padding: 25px 18px 18px;
+    }
+
+    .subtitle {
+        font-size: 15px;
+    }
+
+    .figure {
+        padding: 5px 12px 0;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width: 520px) {
+
+    .card {
+        border-radius: 14px;
+    }
+
+    .logo-container {
+        gap: 5px;
+    }
+
+    .logo-item {
+        height: 60px;
+    }
+
+    .logo-item img {
+        max-width: 90px;
+
+        max-height: 50px;
+    }
+
+    .hero {
+        padding: 22px 15px 15px;
+    }
+
+    .kicker {
+        font-size: 10px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+
+        line-height: 1.5;
+    }
+
+    .figure {
+        padding: 5px 8px 0;
+    }
+
+    .stats {
+        padding: 22px 12px 8px;
+    }
+
+    .stat {
+        width: 100%;
+
+        min-width: 0;
+
+        padding: 17px 15px;
+    }
+
+    .actions {
+        padding: 18px 15px 28px;
+    }
+
+    .btn {
+        width: 100%;
+
+        padding: 14px 15px;
+    }
+
+}
+
 </style>
 </head>
+
+
 <body>
+
 <main class="wrap">
-  <section class="card">
-    <header class="hero">
-      <div class="kicker">Geospatial Production Visualization</div>
-      <h1>Peta Produksi Rumput Laut<br>– Tadui Mamuju</h1>
-      <p class="subtitle">Visualisasi produksi rumput laut berbasis data geospasial untuk mendukung dokumentasi dan pemantauan kawasan budidaya.</p>
-    </header>
 
-    <div class="figure">
-      <img src="cover-peta-tadui-mamuju.png" alt="Peta produksi rumput laut Tadui Mamuju">
+<section class="card">
+
+
+<!-- =========================================================
+     LOGO INSTITUSI
+     ========================================================= -->
+
+<header class="logo-header">
+
+    <div class="logo-container">
+
+        <!-- LOGO UNIVERSITAS HASANUDDIN -->
+        <div class="logo-item">
+            <img
+                src="LOGO UNHAS.png"
+                alt="Universitas Hasanuddin"
+            >
+        </div>
+
+
+        <!-- SEPARATOR -->
+        <div class="logo-separator"></div>
+
+
+        <!-- LOGO LPDP -->
+        <div class="logo-item">
+            <img
+                src="logo_RESMI_LPDP.png"
+                alt="LPDP"
+            >
+        </div>
+
+
+        <!-- SEPARATOR -->
+        <div class="logo-separator"></div>
+
+
+        <!-- LOGO PAIR -->
+        <div class="logo-item">
+            <img
+                src="PAIR_LOGO.png"
+                alt="PAIR"
+            >
+        </div>
+
     </div>
 
-    <div class="stats">
-      <div class="stat">
-        <strong>4.987,59 Kg</strong>
-        <span>Total Produksi Kering Musim Kemarau</span>
-      </div>
+</header>
+
+
+
+<!-- =========================================================
+     TITLE
+     ========================================================= -->
+
+<header class="hero">
+
+    <div class="kicker">
+        Geospatial Production Visualization
     </div>
 
-    <div class="actions">
-      <a class="btn" href="https://unhasanuddinacid-my.sharepoint.com/:f:/g/personal/agus_aris_ms_unhas_ac_id/IgB3-ZgyOqc0RY_Gv5b0FGKtATaiGKij5mKr_cZueiozllM?e=K2Hjyk" target="_blank" rel="noopener noreferrer">
+
+    <h1>
+        Peta Produksi Rumput Laut<br>
+        – Tadui Mamuju
+    </h1>
+
+
+    <p class="subtitle">
+        Visualisasi produksi rumput laut berbasis data geospasial
+        untuk mendukung dokumentasi dan pemantauan kawasan budidaya.
+    </p>
+
+</header>
+
+
+
+<!-- =========================================================
+     MAP
+     ========================================================= -->
+
+<div class="figure">
+
+    <img
+        src="cover-peta-tadui-mamuju.png"
+        alt="Peta Produksi Rumput Laut Tadui Mamuju"
+    >
+
+</div>
+
+
+
+<!-- =========================================================
+     PRODUCTION
+     ========================================================= -->
+
+<div class="stats">
+
+    <div class="stat">
+
+        <strong>
+            4.987,59 Kg
+        </strong>
+
+        <span>
+            Total Produksi Kering Musim Kemarau
+        </span>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     ONEDRIVE BUTTON
+     ========================================================= -->
+
+<div class="actions">
+
+    <a
+        class="btn"
+        href="https://unhasanuddinacid-my.sharepoint.com/:f:/g/personal/agus_aris_ms_unhas_ac_id/IgB3-ZgyOqc0RY_Gv5b0FGKtATaiGKij5mKr_cZueiozllM?e=K2Hjyk"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
         Lihat Dokumentasi &amp; Data
-      </a>
-      <div class="note">Dokumentasi lengkap tersedia melalui OneDrive.</div>
+    </a>
+
+
+    <div class="note">
+        Dokumentasi lengkap tersedia melalui OneDrive.
     </div>
-  </section>
+
+</div>
+
+
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer class="footer">
+
+    © 2026 Universitas Hasanuddin · LPDP · PAIR
+
+</footer>
+
+
 </main>
+
 </body>
 </html>
