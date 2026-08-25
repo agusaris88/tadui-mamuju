@@ -290,6 +290,251 @@ h1 {
 }
 
 
+
+/* =========================================================
+   PRODUCTION DASHBOARD
+   ========================================================= */
+
+.section-title {
+    text-align: center;
+    margin: 34px 20px 20px;
+}
+
+.section-title h2 {
+    margin: 0;
+    font-size: 21px;
+    color: #172027;
+}
+
+.section-title p {
+    margin: 6px 0 0;
+    font-size: 13px;
+    color: #718087;
+}
+
+.production-summary {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    padding: 0 22px;
+}
+
+.production-card {
+    background: #f9fbfb;
+    border: 1px solid #e0e7e9;
+    border-radius: 14px;
+    padding: 17px 12px;
+    text-align: center;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.production-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(20,35,45,.07);
+}
+
+.production-value {
+    display: block;
+    font-size: clamp(20px, 2.7vw, 28px);
+    font-weight: 750;
+    line-height: 1.15;
+    color: #176b87;
+}
+
+.production-label {
+    display: block;
+    margin-top: 6px;
+    font-size: 11px;
+    line-height: 1.35;
+    color: #68777e;
+}
+
+.chart-box {
+    margin: 24px 22px 0;
+    padding: 22px;
+    background: #fbfcfc;
+    border: 1px solid #e1e8ea;
+    border-radius: 16px;
+}
+
+.chart-heading {
+    margin-bottom: 20px;
+}
+
+.chart-heading h3 {
+    margin: 0;
+    font-size: 17px;
+    color: #172027;
+}
+
+.chart-heading p {
+    margin: 5px 0 0;
+    font-size: 12px;
+    color: #718087;
+}
+
+.bar-row {
+    display: grid;
+    grid-template-columns: 190px 1fr 100px;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.bar-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #46565d;
+}
+
+.bar-track {
+    height: 15px;
+    background: #e8eff1;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.bar-fill {
+    height: 100%;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #176b87, #2ca6b9);
+    transform-origin: left center;
+    animation: growBar .8s ease-out both;
+}
+
+@keyframes growBar {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+}
+
+.bar-value {
+    text-align: right;
+    font-size: 12px;
+    font-weight: 700;
+    color: #176b87;
+}
+
+.data-table-section {
+    margin: 24px 22px 0;
+    border: 1px solid #e1e8ea;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.data-table-title {
+    padding: 16px 19px;
+    background: #f7fafa;
+    border-bottom: 1px solid #e1e8ea;
+}
+
+.data-table-title h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #172027;
+}
+
+.table-scroll {
+    overflow-x: auto;
+}
+
+.production-table {
+    width: 100%;
+    min-width: 720px;
+    border-collapse: collapse;
+}
+
+.production-table thead {
+    background: #176b87;
+    color: #fff;
+}
+
+.production-table th {
+    padding: 11px 12px;
+    font-size: 11px;
+    font-weight: 700;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.production-table th:first-child {
+    text-align: left;
+}
+
+.production-table td {
+    padding: 11px 12px;
+    border-bottom: 1px solid #edf1f2;
+    font-size: 11px;
+    color: #4f5e64;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.production-table td:first-child {
+    text-align: left;
+    font-weight: 600;
+    color: #334249;
+}
+
+.production-table tbody tr:hover {
+    background: #f8fbfb;
+}
+
+.production-table .total-row {
+    background: #f1f7f8;
+}
+
+.production-table .total-row td {
+    color: #176b87;
+    font-weight: 750;
+}
+
+@media (max-width: 850px) {
+    .production-summary {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .production-summary {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 9px;
+        padding: 0 10px;
+    }
+
+    .production-card {
+        padding: 15px 8px;
+    }
+
+    .production-value {
+        font-size: 20px;
+    }
+
+    .production-label {
+        font-size: 10px;
+    }
+
+    .chart-box,
+    .data-table-section {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .chart-box {
+        padding: 17px;
+    }
+
+    .bar-row {
+        grid-template-columns: 105px 1fr 72px;
+        gap: 7px;
+    }
+
+    .bar-label,
+    .bar-value {
+        font-size: 10px;
+    }
+}
+
+
 /* =========================================================
    BUTTON
    ========================================================= */
@@ -599,6 +844,152 @@ h1 {
 
 </div>
 
+
+
+
+<!-- =========================================================
+     PRODUCTION DASHBOARD
+     ========================================================= -->
+
+<div class="section-title">
+    <h2>Ringkasan Produksi Berdasarkan Musim</h2>
+    <p>Rekapitulasi area dan produksi rumput laut pada empat periode musim</p>
+</div>
+
+<div class="production-summary">
+
+    <div class="production-card">
+        <span class="production-value">7,594</span>
+        <span class="production-label">Total Area (Ha)</span>
+    </div>
+
+    <div class="production-card">
+        <span class="production-value">132.880,41</span>
+        <span class="production-label">Total Produksi Basah (Kg)</span>
+    </div>
+
+    <div class="production-card">
+        <span class="production-value">13.288,04</span>
+        <span class="production-label">Total Produksi Kering (Kg)</span>
+    </div>
+
+    <div class="production-card">
+        <span class="production-value">13,30</span>
+        <span class="production-label">Total Produksi (Ton)</span>
+    </div>
+
+</div>
+
+<div class="chart-box">
+
+    <div class="chart-heading">
+        <h3>Produksi Kering Berdasarkan Musim</h3>
+        <p>Skala relatif terhadap produksi kering tertinggi</p>
+    </div>
+
+    <div class="bar-row">
+        <div class="bar-label">Transition 2</div>
+        <div class="bar-track">
+            <div class="bar-fill" style="width:48.44%;"></div>
+        </div>
+        <div class="bar-value">2.416,09 Kg</div>
+    </div>
+
+    <div class="bar-row">
+        <div class="bar-label">Rainy Season</div>
+        <div class="bar-track">
+            <div class="bar-fill" style="width:95.18%;"></div>
+        </div>
+        <div class="bar-value">4.746,95 Kg</div>
+    </div>
+
+    <div class="bar-row">
+        <div class="bar-label">Transition 1</div>
+        <div class="bar-track">
+            <div class="bar-fill" style="width:22.81%;"></div>
+        </div>
+        <div class="bar-value">1.137,50 Kg</div>
+    </div>
+
+    <div class="bar-row">
+        <div class="bar-label">Dry Season</div>
+        <div class="bar-track">
+            <div class="bar-fill" style="width:100%;"></div>
+        </div>
+        <div class="bar-value">4.987,50 Kg</div>
+    </div>
+
+</div>
+
+<div class="data-table-section">
+
+    <div class="data-table-title">
+        <h3>Detail Produksi Berdasarkan Musim</h3>
+    </div>
+
+    <div class="table-scroll">
+
+        <table class="production-table">
+
+            <thead>
+                <tr>
+                    <th>Musim</th>
+                    <th>Area (Ha)</th>
+                    <th>Produksi Basah (Kg)</th>
+                    <th>Produksi Kering (Kg)</th>
+                    <th>Produksi (Ton)</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>Transition 2 (Dry to Rainy)</td>
+                    <td>1,381</td>
+                    <td>24.160,92</td>
+                    <td>2.416,09</td>
+                    <td>2,42</td>
+                </tr>
+
+                <tr>
+                    <td>Rainy Season</td>
+                    <td>2,713</td>
+                    <td>47.469,49</td>
+                    <td>4.746,95</td>
+                    <td>4,75</td>
+                </tr>
+
+                <tr>
+                    <td>Transition 1 (Rainy to Dry)</td>
+                    <td>0,650</td>
+                    <td>11.375,00</td>
+                    <td>1.137,50</td>
+                    <td>1,14</td>
+                </tr>
+
+                <tr>
+                    <td>Dry Season</td>
+                    <td>2,850</td>
+                    <td>49.875,00</td>
+                    <td>4.987,50</td>
+                    <td>4,99</td>
+                </tr>
+
+                <tr class="total-row">
+                    <td>TOTAL</td>
+                    <td>7,594</td>
+                    <td>132.880,41</td>
+                    <td>13.288,04</td>
+                    <td>13,30</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
 
 
 <!-- =========================================================
