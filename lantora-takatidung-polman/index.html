@@ -1,1 +1,1414 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
+<title>Peta Masyarakat Pesisir dan Produksi Rumput Laut – Lantora–Takatidung, Polman</title>
+
+<!-- =========================================================
+     OPEN GRAPH — Preview saat link dibagikan
+     ========================================================= -->
+
+<meta property="og:type" content="website">
+
+<meta
+    property="og:title"
+    content="Peta Masyarakat Pesisir dan Produksi Rumput Laut – Lantora–Takatidung, Polman"
+>
+
+<meta
+    property="og:description"
+    content="Visualisasi masyarakat pesisir dan produksi rumput laut berbasis data geospasial. Total produksi kering 363.956,30 Kg atau 363,96 Ton."
+>
+
+<meta
+    property="og:image"
+    content="cover-lantora-takatidung-polman.png"
+>
+
+<meta
+    property="og:image:alt"
+    content="Peta Produksi Rumput Laut Lantora–Takatidung Polman"
+>
+
+
+<meta name="twitter:card" content="summary_large_image">
+
+<meta
+    name="twitter:title"
+    content="Peta Masyarakat Pesisir dan Produksi Rumput Laut – Lantora–Takatidung, Polman"
+>
+
+<meta
+    name="twitter:description"
+    content="Visualisasi produksi rumput laut berbasis data geospasial."
+>
+
+<meta
+    name="twitter:image"
+    content="cover-lantora-takatidung-polman.png"
+>
+
+
+<style>
+
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+:root {
+    color-scheme: light;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    background: #f4f7f8;
+
+    color: #172027;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+   ========================================================= */
+
+.wrap {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 28px 18px 45px;
+}
+
+
+/* =========================================================
+   MAIN CARD
+   ========================================================= */
+
+.card {
+    background: #ffffff;
+
+    border: 1px solid #e4e9ec;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 12px 40px rgba(20, 35, 45, 0.09);
+}
+
+
+/* =========================================================
+   LOGO HEADER
+   ========================================================= */
+
+.logo-header {
+    padding: 25px 35px 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #edf1f3;
+}
+
+
+.logo-container {
+    width: 100%;
+
+    max-width: 820px;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1px
+        1fr
+        1px
+        1fr;
+
+    align-items: center;
+
+    gap: 28px;
+}
+
+
+.logo-separator {
+    width: 1px;
+
+    height: 65px;
+
+    background: #dfe5e8;
+}
+
+
+.logo-item {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    height: 90px;
+}
+
+
+.logo-item img {
+    max-width: 100%;
+
+    max-height: 80px;
+
+    width: auto;
+
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   TITLE / HERO
+   ========================================================= */
+
+.hero {
+    padding: 32px 30px 22px;
+
+    text-align: center;
+}
+
+
+.kicker {
+    font-size: 13px;
+
+    letter-spacing: 0.13em;
+
+    text-transform: uppercase;
+
+    font-weight: 700;
+
+    color: #53717d;
+
+    margin-bottom: 8px;
+}
+
+
+h1 {
+    margin: 0 0 12px;
+
+    font-size: clamp(26px, 3.2vw, 35px);
+
+    line-height: 1.2;
+
+    font-weight: 750;
+
+    color: #172027;
+}
+
+
+.subtitle {
+    margin: 0 auto;
+
+    max-width: 760px;
+
+    color: #63737b;
+
+    font-size: 17px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   MAP IMAGE
+   ========================================================= */
+
+.figure {
+    padding: 5px 22px 0;
+}
+
+
+.figure img {
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    border-radius: 14px;
+
+    border: 1px solid #e0e6e9;
+
+    box-shadow:
+        0 5px 20px rgba(20, 35, 45, 0.06);
+}
+
+
+/* =========================================================
+   SECTION TITLE
+   ========================================================= */
+
+.section-title {
+    text-align: center;
+
+    margin: 34px 20px 20px;
+}
+
+
+.section-title h2 {
+    margin: 0;
+
+    font-size: 21px;
+
+    color: #172027;
+}
+
+
+.section-title p {
+    margin: 6px 0 0;
+
+    font-size: 13px;
+
+    color: #718087;
+}
+
+
+/* =========================================================
+   PRODUCTION SUMMARY
+   ========================================================= */
+
+.production-summary {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 12px;
+
+    padding: 0 22px;
+}
+
+
+.production-card {
+    background: #f9fbfb;
+
+    border: 1px solid #e0e7e9;
+
+    border-radius: 14px;
+
+    padding: 18px 12px;
+
+    text-align: center;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+
+.production-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(20,35,45,.07);
+}
+
+
+.production-value {
+    display: block;
+
+    font-size: clamp(20px, 2.7vw, 28px);
+
+    font-weight: 750;
+
+    line-height: 1.15;
+
+    color: #176b87;
+}
+
+
+.production-label {
+    display: block;
+
+    margin-top: 6px;
+
+    font-size: 11px;
+
+    line-height: 1.35;
+
+    color: #68777e;
+}
+
+
+/* =========================================================
+   DRY PRODUCTION BAR CHART
+   ========================================================= */
+
+.chart-box {
+    margin: 24px 22px 0;
+
+    padding: 22px;
+
+    background: #fbfcfc;
+
+    border: 1px solid #e1e8ea;
+
+    border-radius: 16px;
+}
+
+
+.chart-heading {
+    margin-bottom: 20px;
+}
+
+
+.chart-heading h3 {
+    margin: 0;
+
+    font-size: 17px;
+
+    color: #172027;
+}
+
+
+.chart-heading p {
+    margin: 5px 0 0;
+
+    font-size: 12px;
+
+    color: #718087;
+}
+
+
+.bar-row {
+    display: grid;
+
+    grid-template-columns:
+        190px
+        1fr
+        120px;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 17px;
+}
+
+
+.bar-label {
+    font-size: 12px;
+
+    font-weight: 600;
+
+    color: #46565d;
+}
+
+
+.bar-track {
+    height: 15px;
+
+    background: #e8eff1;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+
+.bar-fill {
+    height: 100%;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #176b87,
+            #2ca6b9
+        );
+
+    transform-origin: left center;
+
+    animation:
+        growBar .8s ease-out both;
+}
+
+
+@keyframes growBar {
+
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+
+}
+
+
+.bar-value {
+    text-align: right;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    color: #176b87;
+}
+
+
+/* =========================================================
+   DETAIL TABLE
+   ========================================================= */
+
+.data-table-section {
+    margin: 24px 22px 0;
+
+    border: 1px solid #e1e8ea;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+}
+
+
+.data-table-title {
+    padding: 16px 19px;
+
+    background: #f7fafa;
+
+    border-bottom: 1px solid #e1e8ea;
+}
+
+
+.data-table-title h3 {
+    margin: 0;
+
+    font-size: 16px;
+
+    color: #172027;
+}
+
+
+.table-scroll {
+    overflow-x: auto;
+}
+
+
+.production-table {
+    width: 100%;
+
+    min-width: 720px;
+
+    border-collapse: collapse;
+}
+
+
+.production-table thead {
+    background: #176b87;
+
+    color: #ffffff;
+}
+
+
+.production-table th {
+    padding: 11px 12px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    text-align: right;
+
+    white-space: nowrap;
+}
+
+
+.production-table th:first-child {
+    text-align: left;
+}
+
+
+.production-table td {
+    padding: 11px 12px;
+
+    border-bottom: 1px solid #edf1f2;
+
+    font-size: 11px;
+
+    color: #4f5e64;
+
+    text-align: right;
+
+    white-space: nowrap;
+}
+
+
+.production-table td:first-child {
+    text-align: left;
+
+    font-weight: 600;
+
+    color: #334249;
+}
+
+
+.production-table tbody tr:hover {
+    background: #f8fbfb;
+}
+
+
+.production-table .total-row {
+    background: #f1f7f8;
+}
+
+
+.production-table .total-row td {
+    color: #176b87;
+
+    font-weight: 750;
+}
+
+
+/* =========================================================
+   ONEDRIVE BUTTON
+   ========================================================= */
+
+.actions {
+    padding: 30px 28px 35px;
+
+    text-align: center;
+}
+
+
+.btn {
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    border-radius: 11px;
+
+    background: #176b87;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    transition:
+        background .2s ease,
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+
+.btn:hover {
+    background: #12566d;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 18px rgba(23,107,135,.2);
+}
+
+
+.note {
+    margin-top: 12px;
+
+    font-size: 13px;
+
+    color: #7a878d;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+    text-align: center;
+
+    padding: 18px;
+
+    color: #8a969c;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    .production-summary {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    .wrap {
+        padding: 15px 10px 30px;
+    }
+
+
+    .logo-header {
+        padding: 20px 15px 15px;
+    }
+
+
+    .logo-container {
+        grid-template-columns:
+            1fr
+            1fr
+            1fr;
+
+        gap: 8px;
+    }
+
+
+    .logo-separator {
+        display: none;
+    }
+
+
+    .logo-item {
+        height: 65px;
+    }
+
+
+    .logo-item img {
+        max-height: 55px;
+
+        max-width: 95px;
+    }
+
+
+    .hero {
+        padding: 24px 16px 18px;
+    }
+
+
+    .kicker {
+        font-size: 10px;
+    }
+
+
+    h1 {
+        font-size: 26px;
+    }
+
+
+    .subtitle {
+        font-size: 14px;
+    }
+
+
+    .figure {
+        padding: 5px 10px 0;
+    }
+
+
+    .production-summary {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 9px;
+
+        padding: 0 10px;
+    }
+
+
+    .production-card {
+        padding: 15px 8px;
+    }
+
+
+    .production-value {
+        font-size: 20px;
+    }
+
+
+    .production-label {
+        font-size: 10px;
+    }
+
+
+    .chart-box,
+    .data-table-section {
+        margin-left: 10px;
+
+        margin-right: 10px;
+    }
+
+
+    .chart-box {
+        padding: 17px;
+    }
+
+
+    .bar-row {
+        grid-template-columns:
+            105px
+            1fr
+            90px;
+
+        gap: 7px;
+    }
+
+
+    .bar-label,
+    .bar-value {
+        font-size: 10px;
+    }
+
+
+    .actions {
+        padding: 25px 15px 30px;
+    }
+
+
+    .btn {
+        width: 100%;
+
+        padding: 14px 15px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<main class="wrap">
+
+<section class="card">
+
+
+<!-- =========================================================
+     LOGO INSTITUSI
+     ========================================================= -->
+
+<header class="logo-header">
+
+    <div class="logo-container">
+
+
+        <!-- LOGO UNIVERSITAS HASANUDDIN -->
+
+        <div class="logo-item">
+
+            <img
+                src="../LOGO UNHAS.png"
+                alt="Universitas Hasanuddin"
+            >
+
+        </div>
+
+
+        <div class="logo-separator"></div>
+
+
+        <!-- LOGO LPDP -->
+
+        <div class="logo-item">
+
+            <img
+                src="../Logo_resmi_LPDP.png"
+                alt="LPDP"
+            >
+
+        </div>
+
+
+        <div class="logo-separator"></div>
+
+
+        <!-- LOGO PAIR -->
+
+        <div class="logo-item">
+
+            <img
+                src="../PAIR_LOGO.png"
+                alt="PAIR"
+            >
+
+        </div>
+
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     TITLE
+     ========================================================= -->
+
+<header class="hero">
+
+    <div class="kicker">
+        Geospatial Socioeconomic and Production Visualization
+    </div>
+
+
+    <h1>
+
+        Peta Masyarakat Pesisir dan Produksi Rumput Laut
+
+        <br>
+
+        Lantora–Takatidung, Polewali Mandar
+
+    </h1>
+
+
+    <p class="subtitle">
+
+        Visualisasi masyarakat pesisir dan produksi rumput laut
+        berbasis data geospasial untuk mendukung dokumentasi
+        dan pemantauan kawasan budidaya.
+
+    </p>
+
+</header>
+
+
+
+<!-- =========================================================
+     MAP
+     ========================================================= -->
+
+<div class="figure">
+
+    <img
+        src="cover-lantora-takatidung-polman.png"
+        alt="Peta Produksi Rumput Laut Lantora Takatidung Polewali Mandar"
+    >
+
+</div>
+
+
+
+<!-- =========================================================
+     PRODUCTION DASHBOARD
+     ========================================================= -->
+
+<div class="section-title">
+
+    <h2>
+        Ringkasan Produksi Berdasarkan Musim
+    </h2>
+
+
+    <p>
+        Rekapitulasi area dan produksi rumput laut pada empat periode musim
+    </p>
+
+</div>
+
+
+
+<!-- =========================================================
+     SUMMARY CARDS
+     ========================================================= -->
+
+<div class="production-summary">
+
+
+    <!-- TOTAL AREA -->
+
+    <div class="production-card">
+
+        <span class="production-value">
+            42,818
+        </span>
+
+        <span class="production-label">
+            Total Area (Ha)
+        </span>
+
+    </div>
+
+
+    <!-- PRODUKSI BASAH -->
+
+    <div class="production-card">
+
+        <span class="production-value">
+            3.639.562,99
+        </span>
+
+        <span class="production-label">
+            Total Produksi Basah (Kg)
+        </span>
+
+    </div>
+
+
+    <!-- PRODUKSI KERING -->
+
+    <div class="production-card">
+
+        <span class="production-value">
+            363.956,30
+        </span>
+
+        <span class="production-label">
+            Total Produksi Kering (Kg)
+        </span>
+
+    </div>
+
+
+    <!-- TON -->
+
+    <div class="production-card">
+
+        <span class="production-value">
+            363,96
+        </span>
+
+        <span class="production-label">
+            Total Produksi (Ton)
+        </span>
+
+    </div>
+
+
+</div>
+
+
+
+<!-- =========================================================
+     DRY PRODUCTION CHART
+     ========================================================= -->
+
+<div class="chart-box">
+
+
+    <div class="chart-heading">
+
+        <h3>
+            Produksi Kering Berdasarkan Musim
+        </h3>
+
+
+        <p>
+            Skala relatif terhadap produksi kering tertinggi
+        </p>
+
+    </div>
+
+
+
+    <!-- TRANSITION 2 -->
+
+    <div class="bar-row">
+
+        <div class="bar-label">
+            Transition 2
+        </div>
+
+
+        <div class="bar-track">
+
+            <div
+                class="bar-fill"
+                style="width:100%;"
+            ></div>
+
+        </div>
+
+
+        <div class="bar-value">
+            104.506,40 Kg
+        </div>
+
+    </div>
+
+
+
+    <!-- RAINY SEASON -->
+
+    <div class="bar-row">
+
+        <div class="bar-label">
+            Rainy Season
+        </div>
+
+
+        <div class="bar-track">
+
+            <div
+                class="bar-fill"
+                style="width:93.04%;"
+            ></div>
+
+        </div>
+
+
+        <div class="bar-value">
+            97.234,64 Kg
+        </div>
+
+    </div>
+
+
+
+    <!-- TRANSITION 1 -->
+
+    <div class="bar-row">
+
+        <div class="bar-label">
+            Transition 1
+        </div>
+
+
+        <div class="bar-track">
+
+            <div
+                class="bar-fill"
+                style="width:72.19%;"
+            ></div>
+
+        </div>
+
+
+        <div class="bar-value">
+            75.438,76 Kg
+        </div>
+
+    </div>
+
+
+
+    <!-- DRY SEASON -->
+
+    <div class="bar-row">
+
+        <div class="bar-label">
+            Dry Season
+        </div>
+
+
+        <div class="bar-track">
+
+            <div
+                class="bar-fill"
+                style="width:83.03%;"
+            ></div>
+
+        </div>
+
+
+        <div class="bar-value">
+            86.776,50 Kg
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+<!-- =========================================================
+     DETAIL TABLE
+     ========================================================= -->
+
+<div class="data-table-section">
+
+
+    <div class="data-table-title">
+
+        <h3>
+            Detail Produksi Berdasarkan Musim
+        </h3>
+
+    </div>
+
+
+
+    <div class="table-scroll">
+
+
+        <table class="production-table">
+
+
+            <thead>
+
+                <tr>
+
+                    <th>
+                        Musim
+                    </th>
+
+                    <th>
+                        Area (Ha)
+                    </th>
+
+                    <th>
+                        Produksi Basah (Kg)
+                    </th>
+
+                    <th>
+                        Produksi Kering (Kg)
+                    </th>
+
+                    <th>
+                        Produksi (Ton)
+                    </th>
+
+                </tr>
+
+            </thead>
+
+
+
+            <tbody>
+
+
+                <!-- TRANSITION 2 -->
+
+                <tr>
+
+                    <td>
+                        Transition 2 (Dry to Rainy)
+                    </td>
+
+                    <td>
+                        12,295
+                    </td>
+
+                    <td>
+                        1.045.063,98
+                    </td>
+
+                    <td>
+                        104.506,40
+                    </td>
+
+                    <td>
+                        104,51
+                    </td>
+
+                </tr>
+
+
+
+                <!-- RAINY -->
+
+                <tr>
+
+                    <td>
+                        Rainy Season
+                    </td>
+
+                    <td>
+                        11,439
+                    </td>
+
+                    <td>
+                        972.346,36
+                    </td>
+
+                    <td>
+                        97.234,64
+                    </td>
+
+                    <td>
+                        97,23
+                    </td>
+
+                </tr>
+
+
+
+                <!-- TRANSITION 1 -->
+
+                <tr>
+
+                    <td>
+                        Transition 1 (Rainy to Dry)
+                    </td>
+
+                    <td>
+                        8,875
+                    </td>
+
+                    <td>
+                        754.387,65
+                    </td>
+
+                    <td>
+                        75.438,76
+                    </td>
+
+                    <td>
+                        75,44
+                    </td>
+
+                </tr>
+
+
+
+                <!-- DRY -->
+
+                <tr>
+
+                    <td>
+                        Dry Season
+                    </td>
+
+                    <td>
+                        10,209
+                    </td>
+
+                    <td>
+                        867.765,00
+                    </td>
+
+                    <td>
+                        86.776,50
+                    </td>
+
+                    <td>
+                        86,78
+                    </td>
+
+                </tr>
+
+
+
+                <!-- TOTAL -->
+
+                <tr class="total-row">
+
+                    <td>
+                        TOTAL
+                    </td>
+
+                    <td>
+                        42,818
+                    </td>
+
+                    <td>
+                        3.639.562,99
+                    </td>
+
+                    <td>
+                        363.956,30
+                    </td>
+
+                    <td>
+                        363,96
+                    </td>
+
+                </tr>
+
+
+            </tbody>
+
+
+        </table>
+
+
+    </div>
+
+
+</div>
+
+
+
+<!-- =========================================================
+     ONEDRIVE BUTTON
+     ========================================================= -->
+
+<div class="actions">
+
+
+    <a
+        class="btn"
+
+        href="https://unhasanuddinacid-my.sharepoint.com/:f:/g/personal/agus_aris_ms_unhas_ac_id/IgC_-7sF2EPUTo_oqdX63veHAcM_-YwjrhBBjAdnMegwvWU?e=Q3tR1W"
+
+        target="_blank"
+
+        rel="noopener noreferrer"
+    >
+
+        Lihat Dokumentasi &amp; Data
+
+    </a>
+
+
+    <div class="note">
+
+        Dokumentasi lengkap tersedia melalui OneDrive.
+
+    </div>
+
+
+</div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer class="footer">
+
+    © 2026 Universitas Hasanuddin · LPDP · PAIR
+
+</footer>
+
+
+</main>
+
+</body>
+</html>
